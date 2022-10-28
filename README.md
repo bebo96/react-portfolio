@@ -4,10 +4,7 @@
 A single page application built using react!
 
 ## Built With 
-* Node JS 
-* Express
-* MongoDB 
-* Mongoose ODM
+* React JS
 
 ## Repository
 https://github.com/bebo96/react-portfolio
