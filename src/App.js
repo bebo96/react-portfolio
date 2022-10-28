@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Nav from './components/Nav';
+import About from './components/About';
+import ContactForm from './components/Contact';
+import Portfolio from './components/Portfolio';
+import Resume from './components/Resume';
 
 function App() {
+
+
+  const [contactSelected, setContactSelected] = useState(false);
+  const [aboutSelected, setAboutSelected] = useState(true);
+  const [resumeSelected, setResumeSelected] = useState(false);
+  const [portfolioSelected, setPortfolioSelected] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+        resumeSelected={resumeSelected}
+        setResumeSelected={setResumeSelected}
+        portfolioSelected={portfolioSelected}
+        setPortfolioSelected={setPortfolioSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
+      ></Nav>
+      <main>
+        {aboutSelected &&
+          
+            <About></About>
+        }
+        {contactSelected &&
+          
+            <ContactForm></ContactForm>
+        }
+        {resumeSelected &&
+          
+          <Resume></Resume>
+        }
+        {portfolioSelected &&
+          
+          <Portfolio></Portfolio>
+        }
+      </main>
     </div>
   );
 }
