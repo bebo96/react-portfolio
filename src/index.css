@@ -289,3 +289,36 @@ a {
 .navActive {
   color: var(--secondary);
 }
+
+.social-container {
+  padding: 25px 50px;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+  color: white;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+  color: #49a1eb;
+}
+
+#github:hover {
+  color: gray;
+}
+
+ .App{
+  color: #228b22;
+  text-align: center;
+ }
+ .footer {
+
+  position: block;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  font-size: 25px;
+ }
