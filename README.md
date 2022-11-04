@@ -1,7 +1,7 @@
 # React Portfolio 
 
 ## Purpose
-A single page application built using react!
+A single page application built using react to showcase a few of the projects I built!
 
 ## Built With 
 * React JS
